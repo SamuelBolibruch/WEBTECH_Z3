@@ -1,0 +1,123 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 70%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.modal-content {
+    position: relative;
+    top: 35%; /* Posunutie o 20% od vrchu modálu */
+    margin: 0 auto; /* Zarovnanie obsahu na stred na šírku */
+    width: 80%; /* Šírka obsahu 80% šírky modálu */
+    text-align: center; /* Zarovnanie obsahu na stred */
+}
+
+.modal-content img{
+    height: 10rem;
+}
+
+.player-name-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Vertikálny odstup medzi obsahom a tlačidlom */
+}
+
+#player-name {
+    max-width: 50%;
+    height: 2rem;
+    width: 30rem;
+    border-radius: 7px;
+    padding: 0 1rem;
+}
+
+.button {
+    width: 10rem;
+    max-width: 30%;
+    height: 2rem;
+    border-radius: 7px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center; /* Zarovnanie textu na stred vodorovne */
+    align-items: center; /* Zarovnanie textu na stred vertikálne */
+}
+
+#game {
+    display: none;
+    width: 800px;
+    height: 600px;
+    background-color: #8f8f8f;
+    border: 2px solid black;
+}
+
+.score-information-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.score-information {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.01); /* Prehľadné pozadie */
+    padding: 5px;
+}
+
+.score-text {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem; /* Zväčšenie veľkosti textu na 20px */
+    font-weight: bold; /* Zvýraznenie textu */
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#game-status {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 20px;
+    display: none; /* Tento element bude na začiatku skrytý */
+    padding: 2rem;
+}
+
+#game-status p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+}
